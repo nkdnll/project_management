@@ -1,0 +1,8 @@
+[2025-06-13 14:08:29] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-13 15:19:36] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-13 15:19:47] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-13 15:21:00] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-13 15:25:02] [admin:Anika@gmail.com] [DELETE_PROJECT] Deleted project 'testlogs' (ID: 14)
+[2025-06-13 16:53:11] [student:rai bleh babiano] [Submitted File] Submitted 'LEC-5_video_.pdf' for assignment ID 32
+[2025-06-13 16:53:59] [admin:Anika@gmail.com] [GRADE_ASSIGNMENT] Graded assignment ID 32 for student ID 7 with score 100.
+[2025-06-13 16:56:45] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'

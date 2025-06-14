@@ -1,0 +1,412 @@
+/*header*/
+header {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #291C0E;
+    transition: 0.6s;
+    box-shadow: 0rem 0.5rem rgba(163, 136, 136, 0.1);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+    margin-left: 80px;
+  }
+
+  .navbar p {
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+    margin: 0;
+  }
+/*end of header*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #F7F2F2;
+  }
+
+/*sidebar*/
+
+  .container {
+    display: flex;
+  height: 100vh;
+  padding-top: 10vh; /* space for fixed header */
+  box-sizing: border-box;
+  overflow: hidden;
+
+  }
+  .sidebar {
+    width: 210px;
+  background-color: #75483D;
+  color: #f0e8d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  }
+  
+  .sidebar ul {
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+  }
+  .sidebar li {
+    margin: 20px 0;
+  }
+
+  .sidebar li a {
+    display: block;
+    align-items: center;
+    width: 100%;   
+    color: #e0d4c8;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;  
+  }
+  
+  .sidebar li a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar li a:hover,
+  .sidebar li a.active {
+    width: 250px;                 /* Extends the link width */
+  margin-left: -20px;           /* Moves it slightly left to look centered */
+  padding-left: 35px;           /* Indent text inward */
+  background-color: #b99a84;
+  color: #4e3b34;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  }
+  
+  .logout {
+   margin-top: 40px;         /* Optional spacing from menu */
+   align-self: flex-end;
+  font-size: 18px;
+  color: #f0e8d5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  
+  .logout i {
+    margin-right: 8px;
+  }
+  
+  .logout:hover {
+    color: #4e3b34;
+    font-weight: bold;
+    margin-left: -20px;
+    padding-left: 35px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+
+/*END OF SIDE BAR*/
+
+  .main-content {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+  padding: 25px 20px 20px 20px; /* top right bottom left */
+  box-sizing: border-box;
+  height: calc(100vh - 10vh); /* remaining height after fixed header */
+  flex: 1;
+  position: relative;
+  }
+  .main-content h1 {
+  font-size: 35px;
+  }
+
+  .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Optional: adds space between containers */
+  align-items: flex-start; /* Aligns containers to the top */
+  margin: 20px; /* Optional: for spacing */
+}
+.head{
+  width: auto;
+  margin-left: 20px;
+  display: flex;
+}
+.head span{
+  margin-left: 1160px;
+  margin-top: 25px;
+}
+/* Left Container */
+.container1 {
+  width: 800px;
+  height: 590px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.container1 h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Title section */
+.title {
+  width: 800px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between; /* pushes .NAME left and .STATUS right */
+  align-items: center;            /* vertically centers content */
+  padding: 0 20px;                /* optional horizontal spacing */
+  box-sizing: border-box;
+}
+
+.NAME,
+.STATUS {
+  margin: 0;                      /* remove hardcoded margins */
+  font-weight: bold;
+}
+.NAME{
+  margin-left: 70px;
+}
+.STATUS{
+  margin-right: 120px;
+}
+/* Content Row */
+.content {
+  width: 750;
+  height: 25px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* push children to edges */
+  align-items: center;            /* center vertically */
+  box-sizing: border-box;
+}
+
+.account,
+.status {
+  margin: 0;                      /* remove conflicting margins */
+  font-size: 25px;
+}
+.status {
+  color: green;
+  margin-right: 115px;
+}
+.account{
+  margin-left: 30px;
+}
+/* Right Container */
+.container3 {
+  padding: 20px;
+  height: 580px;
+  width: 450px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.student-submissions a{
+  text-decoration: none;
+  color: black;
+}
+#grade{
+  font-size: 20px;
+}
+#grade-submit{
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+/* Comment Box */
+.comment-box {
+  width: 430px;
+  height: auto;
+  min-height: 400px;
+  max-height: 400x;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #f0e8d5;
+
+  margin-top: 380px;
+}
+
+.comment-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+
+.comment-input {
+  position: relative;
+}
+
+.comment-input textarea {
+  width: 100%;
+  height: 60px;
+  resize: none;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+
+.send-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  margin-top: 63px;
+}
+
+.comment-item {
+  font-size: 14px;
+  background: #f9f9f9;
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+/* Box (small white block with title?) */
+.box {
+  height: 25px;
+  width: 100px;
+  background-color: #f0e8d5;
+  border-radius: 10px;
+  margin-left: 72%;
+  margin-top: 20px;
+  padding: 10px;
+
+}
+
+.box h1 {
+  text-align: center;
+  margin-top: 0;
+
+
+
+
+  font-size: 20px;
+  color: black;
+}
+
+/* Send button style */
+#send-Btn {
+  cursor: pointer;
+  color: white;
+  transition: color 0.2s;
+  margin-left: 95px;
+}
+
+#send-Btn:hover {
+  color: #a17663;
+}
+/* Styling for comment box conversation */
+        .comment-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .comment-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .comment-item {
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .comment-item.admin {
+            background: #d1e7dd;
+            text-align: right;
+        }
+        .comment-item.student {
+            background: #fff3cd;
+            text-align: left;
+        }
+        .comment-username {
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        .comment-text {
+            margin: 5px 0 0 0;
+            font-size: 1em;
+        }
+        .comment-time {
+            font-size: 0.75em;
+            color: #666;
+        }
+        .comment-input {
+            margin-top: 15px;
+            display: flex;
+            gap: 8px;
+        }
+        .comment-input textarea {
+            flex-grow: 1;
+            height: 60px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+            font-size: 1em;
+        }
+        .comment-input button {
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .comment-input button:hover {
+            background: #084298;
+        }
+/* hide everything that should start closed */
+.hidden { display: none; }
+.student-item { cursor: pointer; }          /* make the list feel clickable */
+.student-item.active { 
+  background:#f2f2f2;
+   height: 50px; /* or however much higher you want */
+}

@@ -1,0 +1,533 @@
+/*header*/
+header {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #291C0E;
+    transition: 0.6s;
+    box-shadow: 0rem 0.5rem rgba(163, 136, 136, 0.1);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+    margin-left: 80px;
+  }
+
+  .navbar p {
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+    margin: 0;
+  }
+/*end of header*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #F7F2F2;
+  }
+
+/*sidebar*/
+
+  .container {
+    display: flex;
+  height: 100vh;
+  padding-top: 10vh; /* space for fixed header */
+  box-sizing: border-box;
+  overflow: hidden;
+
+  }
+  .sidebar {
+    width: 210px;
+  background-color: #75483D;
+  color: #f0e8d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  }
+  
+  .sidebar ul {
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+  }
+  .sidebar li {
+    margin: 20px 0;
+  }
+
+  .sidebar li a {
+    display: block;
+    align-items: center;
+    width: 100%;   
+    color: #e0d4c8;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;  
+  }
+  
+  .sidebar li a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar li a:hover,
+  .sidebar li a.active {
+    width: 250px;                 /* Extends the link width */
+  margin-left: -20px;           /* Moves it slightly left to look centered */
+  padding-left: 35px;           /* Indent text inward */
+  background-color: #b99a84;
+  color: #4e3b34;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  }
+  
+  .logout {
+   margin-top: 40px;         /* Optional spacing from menu */
+   align-self: flex-end;
+  font-size: 18px;
+  color: #f0e8d5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  
+  .logout i {
+    margin-right: 8px;
+  }
+  
+  .logout:hover {
+    color: #4e3b34;
+    font-weight: bold;
+    margin-left: -20px;
+    padding-left: 35px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+
+/*END OF SIDE BAR*/
+
+  .main-content {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+  padding: 25px 20px 20px 20px; /* top right bottom left */
+  box-sizing: border-box;
+  height: calc(100vh - 10vh); /* remaining height after fixed header */
+  flex: 1;
+  position: relative;
+  }
+.greeting {
+  width: 1320px;
+  height: 120px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  color: rgb(5, 5, 5);
+  display: flex;
+  align-items: center;
+}
+
+.greeting-inside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting h1 {
+  font-size: 40px; /* reduced to fit the container height */
+  margin: 0 0 5px 0;
+  line-height: 1.2;
+}
+
+.greeting p {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.greeting img {
+  width: 240px;
+  height: 240px;
+  margin-left: auto; /* Push image to the far right */
+  border-radius: 50%;
+  object-fit: cover;
+    margin-right: 20px;
+        border: 5px solid #000000;
+}
+
+
+.row2{
+    display: flex;
+    gap: 20px; /* Space between box4 and new-box */
+    align-items: flex-start; /* Aligns items at the top */
+}
+
+.box4{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-rows: repeat(2, 1fr);    /* 2 equal rows */
+  gap: 0;                                 /* No space between boxes */
+  width: 800px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 20px;
+  color: rgb(0, 0, 0);
+  overflow: hidden;                      /* Hide any overflow */
+}
+.box4 .box{
+  display: flex;
+  border:5px solid #F7F2F2;                          /* Remove visible borders */
+  border-radius: 0;                      /* No rounding between boxes */
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.box{
+display: flex;
+}
+.box i{
+    margin-top: 45px;
+  margin-left: 5px;
+  font-size: 80px;
+}
+.box .box-inside {
+  margin-left: 10px;
+  flex: 1;
+}
+.box, .progress {
+    padding: 15px;
+    border-radius: 8px;
+}
+.box .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.box .details {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.box .due {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+.progress{
+  width: 690px;    /* Width of the box */
+    height: 365px;  /* Height of the box */
+    background-color: #fcfcfc; /* Background color */
+    border-radius: 10px;       /* Rounded corners (optional) */
+    padding: 10px;        /* Inner spacing */
+    margin: 20px;     /* Outer spacing */
+    color: rgb(0, 0, 0);         /* Text color */ 
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*progress circle*/
+
+.progress-left {
+    flex: 1;
+    padding: 15px;
+
+    flex-direction: column;
+}
+.progress-left span{
+  font-size: 50px;
+  margin-left: 10px;
+}
+.progress-left p{
+  font-size: 20px;
+}
+
+.done,.pending{
+  width: 250px;    /* Width of the box */
+    height: 65px;
+    background-color: #BEB5A9; /* Background color */
+    margin: 15px;
+    border-radius: 10px;  
+}
+.done p,.pending p{
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+.progress-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+}
+
+.progress-ring-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 15;
+}
+
+.progress-ring-fill {
+    fill: none;
+    stroke: #4caf50;
+    stroke-width: 15;
+    stroke-linecap: round;
+    stroke-dasharray: 565.48; /* 2 * π * 90 */
+    stroke-dashoffset: 141.37; /* 75% progress */
+    transition: stroke-dashoffset 0.5s ease;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.progress-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*task list*/
+.row3{
+   display: flex;
+    gap: 20px; /* Space between box4 and new-box */
+    align-items: flex-start; /* Aligns items at the top */
+}
+
+.task {
+   width: 720px;         /* Width of the box */
+    height:340px;    /* Height of the box */
+    background-color: #ffffff; /* Background color */
+    border-radius: 10px;       /* Rounded corners (optional) */
+    padding: 25px;        /* Inner spacing */
+    margin: 20px;         /* Outer spacing */
+    color: rgb(5, 5, 5);         /* Text color */ 
+}
+.task h3{
+  padding: 20px;
+   color: #000000;
+   display: inline;
+   font-size: 25px;
+
+}
+.task-list {
+    flex-direction: column;
+    gap: 13px;
+    padding-left: 5px;
+    margin: 20PX;
+  }
+
+.task-item {
+  display: block; /* make the entire box clickable */
+  background-color: #BEB5A9;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 5px solid #A78D78;
+  margin-bottom: 12px;
+  font-size: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  color: #333;
+  text-decoration: none;
+  height: auto; /* allow dynamic height */
+}
+.task-item:hover {
+  background-color:#f2f2f2;
+  color: white;
+  transform: translateX(5px);
+}
+.task-item p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+  .task-item span {
+    flex-grow: 1;
+    margin-left: 180px;
+    transform: translateX(-175px);
+    padding-left: 0px;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .task-item:first-child span {
+      margin-left: 140px;
+      transform: translateX(-133px);
+      padding-left: 0;
+      margin-top: -3px;
+
+  }
+  .task-item:nth-last-child(1) span, 
+  .task-item:nth-last-child(2) span { 
+    position: relative;
+    left: -2px; 
+    margin-left: -10px; 
+    letter-spacing: -0.2px; 
+    margin-top: 1px;
+    transform: translateX(15px);
+  }
+
+  .task-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #888;
+  }
+
+/*calendar*/
+/* Outer calendar container */
+.calendar {
+  width: 690px;
+  height: 390px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px; /* reduced padding */
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  padding: 2px 10px; /* reduced */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icons span {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 1.4rem;
+}
+
+.current-date {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.calendar1 {
+  padding: 10px; /* reduced */
+  width: 100%;
+  flex: 1;
+}
+
+.calendar1 ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar1 li {
+  width: calc(100% / 7);
+  font-size: 0.9rem;
+}
+
+.calendar1 .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar1 .days {
+  margin-bottom: 10px;
+}
+
+.calendar1 .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px; /* reduced */
+  height: 34px;
+  line-height: 34px;
+}
+
+.days li::before {
+  height: 34px;
+  width: 34px;
+}
+
+.days li.active::before {
+  background: #9B59B6;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  background: #4caf50;      /* or any color you like */
+  color: #fff;
+  border-radius: 50%;
+}
+.days li.active.due-date {
+  background: linear-gradient(135deg, #e53935 50%, #4caf50 50%);
+  color: #fff;
+}
+.due-date {
+      background-color: #f44336;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }

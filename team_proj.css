@@ -1,0 +1,251 @@
+/*header*/
+header {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #291C0E;
+    box-shadow: 0rem 0.5rem rgba(163, 136, 136, 0.1);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+    margin-left: 80px;
+  }
+
+  .navbar p {
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+    margin: 0;
+  }
+/*end of header*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #F7F2F2;
+  }
+
+/*sidebar*/
+.container {
+  display: flex;
+  height: 100vh;
+  padding-top: 10vh; /* space for fixed header */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sidebar {
+  width: 210px;
+  background-color: #75483D;
+  color: #f0e8d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+  .sidebar ul {
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+  }
+  .sidebar li {
+    margin: 20px 0;
+  }
+
+  .sidebar li a {
+    display: block;
+    align-items: center;
+    width: 100%;   
+    color: #e0d4c8;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;  
+  }
+  
+  .sidebar li a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar li a:hover,
+  .sidebar li a.active {
+    width: 250px;                 /* Extends the link width */
+  margin-left: -20px;           /* Moves it slightly left to look centered */
+  padding-left: 35px;           /* Indent text inward */
+  background-color: #b99a84;
+  color: #4e3b34;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  }
+  
+  .logout {
+    margin-top: auto;
+  align-self: flex-end;
+  font-size: 18px;
+  color: #f0e8d5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  
+  .logout i {
+    margin-right: 8px;
+  } 
+  
+  .logout:hover {
+    color: #4e3b34;
+    font-weight: bold;
+    margin-left: -20px;
+    padding-left: 35px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+
+
+/*END OF SIDE BAR*/
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #F7F2F2;
+  overflow-y: auto;
+}
+
+
+.team_name{
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  min-height: 495px;  /* keep your min-height */
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  color: rgb(10, 10, 10);
+  margin-right: 20px;
+  overflow: hidden;
+}
+.box h2{
+    margin-left: 10px;
+    border-bottom: 2px solid #291C0E;
+    margin-right: 10px;
+}
+.inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #D9D9D9;
+  color: #000000;
+  margin: 15PX;
+}
+
+.inside-left {
+  width: 70%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.details {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.due {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.inside-right {
+  display: flex;
+  gap: 10px;
+}
+
+.done, .pending {
+  background-color: #f6f1eb;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 80px;
+}
+
+.done h4,
+.pending h4 {
+  font-size: 11px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.count {
+  font-weight: bold;
+  font-size: 18px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.add-work {
+  padding: 10px 20px;
+  background-color: #5c3a2d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+
+  margin-top: auto;       /* pushes button down */
+  align-self: flex-end;   /* aligns to the right */
+  margin-right: 20px;     /* right spacing */
+  
+  float: none;            /* no float */
+}
+
+.add-work:hover {
+  background-color: #472c1d;
+}
+.inside-right a{
+  text-decoration: none;
+  color: #000000;
+}
+.add-work a{
+  text-decoration: none;
+  color: black;
+}
+
+.no-work{
+  margin-left: 10px;
+}

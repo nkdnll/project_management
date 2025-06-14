@@ -1,0 +1,419 @@
+/*header*/
+header {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #291C0E;
+    transition: 0.6s;
+    box-shadow: 0rem 0.5rem rgba(163, 136, 136, 0.1);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+    margin-left: 80px;
+  }
+
+  .navbar p {
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+    margin: 0;
+  }
+/*end of header*/
+
+body {
+   margin: 0;
+  padding: 0;
+  background-color: #F7F2F2;
+  height: 100vh;
+  overflow: hidden;
+  }
+
+/*sidebar*/
+
+  .container {
+   display: flex;
+  height: 100vh;
+  padding-top: 10vh; /* corrected from 5vh — your header is 10% */
+  box-sizing: border-box;
+  overflow: hidden;
+  }
+  .sidebar {
+    width: 210px;
+  background-color: #75483D;
+  color: #f0e8d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  }
+  
+  .sidebar ul {
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+  }
+  .sidebar li {
+    margin: 20px 0;
+  }
+
+  .sidebar li a {
+    display: block;
+    align-items: center;
+    width: 100%;   
+    color: #e0d4c8;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;  
+  }
+  
+  .sidebar li a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar li a:hover,
+  .sidebar li a.active {
+    width: 250px;                 /* Extends the link width */
+  margin-left: -20px;           /* Moves it slightly left to look centered */
+  padding-left: 35px;           /* Indent text inward */
+  background-color: #b99a84;
+  color: #4e3b34;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  }
+  
+  .logout {
+    margin-top: auto;
+  align-self: flex-end;
+  font-size: 18px;
+  color: #f0e8d5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  }
+  
+  .logout i {
+    margin-right: 8px;
+  }
+  
+  .logout:hover {
+    color: #4e3b34;
+    font-weight: bold;
+    margin-left: -20px;
+    padding-left: 35px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+
+
+/*END OF SIDE BAR*/
+
+ 
+  .main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+  padding: 10px 20px 20px 20px;
+  height: 90vh; /* 100vh minus fixed header */
+  box-sizing: border-box;
+}
+
+.main-content h1{
+    font-size: 35px;
+    margin-left: 20px;
+}
+.content1{
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.assigned{
+    
+    height: 60px;        /* Height of the box */
+    background-color: #ffffff; /* Background color */
+    padding: 15px;        /* Inner spacing */
+    border-radius: 10px;
+    color: rgb(5, 5, 5);         /* Text color */ 
+    display:grid;
+    grid-template-columns: auto auto;
+     border-bottom: 2px solid #caa07e;
+
+}
+.assigned h2{
+  margin-left: 20px;
+}
+.donebox{
+    background-color: #ffffff;
+    padding-left: 20px;
+    height: 60px;
+}
+#doneBtn {
+  display: block;
+  margin: 0;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Remove default link color/underline */
+#doneBtn a {
+  color: inherit;            /* use the same color as the <h2> */
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* Hover state: only the text changes color */
+#doneBtn a:hover {
+  color: #8F7A69;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Active/click state: slight “press” effect */
+#doneBtn a:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+.assigned-proj{
+   width: 98%;
+    height: 560px;        /* Height of the box */
+    background-color: #ffffffd7; /* Background color */
+    border-radius: 10px;       /* Rounded corners (optional) */
+    padding: 15px;        /* Inner spacing */
+
+    color: rgb(5, 5, 5);         /* Text color */ 
+
+}
+.card-content {
+
+
+    height: 60px;              /* Height of the box */
+    background-color: #f0e8d5; /* Background color */
+    border-radius: 10px;       /* Rounded corners */
+    padding: 10px;             /* Inner spacing */
+    margin: 10px;              /* Outer spacing */
+    color: rgb(5, 5, 5);       /* Text color */
+
+    display: flex;                   /* Flex container: left/details + right/dropdown */
+    justify-content: space-between;  /* Push details to the left, dropdown to the right */
+    align-items: center;             /* Vertically center everything */
+    position: relative;              /* (not strictly needed here, but often handy) */
+}
+.card-content a {
+  color: inherit;            /* use the same color as the <h2> */
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+/* ─── PROJECT DETAILS ─── */
+.project-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.project-details p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ─── SELECT WRAPPER (for custom arrow) ─── */
+.select-wrapper {
+    position: relative;            /* anchor for the ::after arrow */
+    display: inline-block;         /* shrinkwrap around the <select> */
+    width: 160px;
+     margin-right: 20px;
+
+}
+
+.select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: #ffffff;     
+    border: 1px solid #333;        
+    border-radius: 6px;            
+    
+    /* Let the <select> fill the wrapper’s width */
+    width: 100%;
+
+    /* Increase height so it’s more substantial in the 60px box */
+    height: 36px;
+    line-height: 1.2;
+
+    /* Left padding for text; right padding leaves room for the arrow */
+    padding: 6px 32px 6px 12px;    
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+/* ─── CUSTOM ARROW via ::after ─── */
+.select-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;                   /* match the select’s right padding */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;    /* dark‐gray triangle pointing up */
+    pointer-events: none;          /* click “falls through” to the <select> */
+}
+
+/* Optional: hover/focus styling to darken border */
+.select-wrapper select:hover,
+.select-wrapper select:focus {
+    border-color: #111;
+}
+
+.container2 {
+    padding: 20px;
+    height: 640px;
+    width: 290px;
+    background-color: #ffffff;
+    right: 0;
+    margin-left: 1500px;
+    margin-top: -658px;
+    border-radius: 10px;
+}
+.container2 h3{
+
+   margin-left: 10px;        
+   margin-right: 5000px;
+   margin-top: 70px;
+   color: #000000;
+   display: inline;
+   left: -75px;
+
+}
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: -30px;
+    padding-left: 5px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background-color: #BEB5A9 ;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 4px solid #A78D78;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    height: 25px;
+  }
+  .task-item:hover {
+    background-color: #f5f5f5;
+    transform: translateX(3px);
+  }
+  .task-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #A78D78;
+    cursor: pointer;
+    margin-right: 3px;
+  }
+  .task-item span {
+    flex-grow: 1;
+    margin-left: 180px;
+    transform: translateX(-175px);
+    padding-left: 0px;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .task-item:first-child span {
+      margin-left: 140px;      
+      transform: translateX(-133px);
+      padding-left: 0;
+      margin-top: -3px;
+  
+  }
+  .task-item:nth-last-child(1) span, 
+  .task-item:nth-last-child(2) span { 
+    position: relative;
+    left: -2px; 
+    margin-left: -10px; 
+    letter-spacing: -0.2px; 
+    margin-top: 1px;
+    transform: translateX(15px);
+  }
+  
+  .task-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #888;
+  }
+.status-box {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.status-dropdown {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.status-dropdown:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.status-dropdown:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+

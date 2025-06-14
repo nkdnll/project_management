@@ -1,0 +1,302 @@
+/*header*/
+header {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #291C0E;
+    transition: 0.6s;
+    box-shadow: 0rem 0.5rem rgba(163, 136, 136, 0.1);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar img {
+    width: 100px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 15px;
+    margin-left: 80px;
+  }
+
+  .navbar p {
+    font-size: 25px;
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+    margin: 0;
+  }
+/*end of header*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #f2f2f2;
+  }
+
+/*sidebar*/
+
+  .container {
+    display: flex;
+  height: 100vh;
+  padding-top: 10vh; /* space for fixed header */
+  box-sizing: border-box;
+  overflow: hidden;
+
+  }
+  .sidebar {
+    width: 210px;
+  background-color: #75483D;
+  color: #f0e8d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  }
+  
+  .sidebar ul {
+    padding: 0;
+    padding-top: 40px;
+    list-style: none;
+  }
+  .sidebar li {
+    margin: 20px 0;
+  }
+
+  .sidebar li a {
+    display: block;
+    align-items: center;
+    width: 100%;   
+    color: #e0d4c8;
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;  
+  }
+  
+  .sidebar li a i {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .sidebar li a:hover,
+  .sidebar li a.active {
+    width: 250px;                 /* Extends the link width */
+  margin-left: -20px;           /* Moves it slightly left to look centered */
+  padding-left: 35px;           /* Indent text inward */
+  background-color: #b99a84;
+  color: #4e3b34;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  }
+  
+  .logout {
+   margin-top: 40px;         /* Optional spacing from menu */
+   align-self: flex-end;
+  font-size: 18px;
+  color: #f0e8d5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  
+  .logout i {
+    margin-right: 8px;
+  }
+  
+  .logout:hover {
+    color: #4e3b34;
+    font-weight: bold;
+    margin-left: -20px;
+    padding-left: 35px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+
+/*END OF SIDE BAR*/
+
+  .main-content {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+  padding: 25px 20px 20px 20px; /* top right bottom left */
+  box-sizing: border-box;
+  height: calc(100vh - 10vh); /* remaining height after fixed header */
+  flex: 1;
+  position: relative;
+  }
+.title{
+    width: 1332px;         /* Width of the box */
+    height: 60px;        /* Height of the box */
+    margin: 10px;         /* Outer spacing */
+    color: rgb(5, 5, 5);         /* Text color */ 
+    border-bottom:2px solid #caa07e;
+    padding: 10px;
+
+}
+.title h1{
+    font-size: 40px;
+    margin: 0;
+}
+.details{
+    width: 1332px;         /* Width of the box */
+    height: auto;        /* Height of the box */
+    margin: 20px;         /* Outer spacing */
+    color: rgb(5, 5, 5);         /* Text color */ 
+    border-bottom:2px solid #caa07e;
+
+    margin-top: 0;
+}
+.details h2{
+    font-size: 28px;
+}
+.details p{
+    font-size: 20px;
+}
+.file{
+    width: 1300px;         /* Width of the box */
+    height: auto;        /* Height of the box */
+    background-color: #ffffff; /* Background color */
+    border-radius: 10px;       /* Rounded corners (optional) */
+    padding: 15px;        /* Inner spacing */
+    margin: 20px;         /* Outer spacing */
+    color: rgb(5, 5, 5);         /* Text color */ 
+    margin-top: 0;
+}
+.file p {
+  font-size: 18px;
+}
+.file a{
+  text-decoration: none;
+  color:black;
+}
+hr{
+    width: 1332px;
+     border: none;             /* Remove default styles */
+    margin: 0 20px;           /* Match .file horizontal margin */
+    border-bottom:2px solid #caa07e;
+}
+.upload{
+    width: 1300px;         /* Width of the box */
+    height: auto;        /* Height of the box */
+    background-color: #ffffff; /* Background color */
+    border-radius: 10px;       /* Rounded corners (optional) */
+    padding: 15px;        /* Inner spacing */
+    margin: 20px;         /* Outer spacing */
+    color: rgb(5, 5, 5);         /* Text color */ 
+}
+.task-score {
+    display: flex;
+    justify-content: space-between; /* 👈 Pushes left and right */
+    align-items: center;            /* 👈 Vertical alignment */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.task-score .task {
+    font-size: 22px;
+}
+.task-score .score {
+    font-size: 22px;
+    color: green;
+}
+.input-file{
+    display: block;
+  width: 98%;
+  background-color: #c5b8a6;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.submit{
+    width: 1295px;
+  background-color: #704437;
+  color: #f3e7d7;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 60px;
+  font-size: 18px;
+}
+.student-submissions p{
+font-size: 18px;
+}
+.student-submissions a{
+  text-decoration: none;
+  color: black;
+}
+.comment-section{
+  margin: 20px;
+}
+.comment-section{
+    width: 1300px;         /* Width of the box */
+    height: auto;        /* Height of the box */
+    border-radius: 10px;       /* Rounded corners (optional) */
+    padding: 15px;        /* Inner spacing */
+    margin: 20px;         /* Outer spacing */
+    color: rgb(5, 5, 5);         /* Text color */ 
+  align-items: center;
+  gap: 10px;               /* space between items */
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 20px;
+}
+.comment-item{
+  background-color: #333;
+}
+.comment-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ffffff;
+  border-radius: px;
+  font-size:20px;
+  height: auto;
+}
+
+.comment p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#file-name {
+    font-weight: bold;
+}
+.comment-section button{
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
