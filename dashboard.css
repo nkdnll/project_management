@@ -253,6 +253,10 @@ display: flex;
   color: #888;
   margin-top: 5px;
 }
+.red-date {
+  color: red;
+  font-weight: bold;
+}
 .progress{
   width: 690px;    /* Width of the box */
     height: 365px;  /* Height of the box */

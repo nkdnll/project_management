@@ -182,10 +182,10 @@ $progressPercentage = ($totalTasks > 0) ? round(($completedTasks / $totalTasks) 
                 <?php endif; ?>
               </div>
               <div class="due">
-                <?php if (!empty($closestProject['due_date'])): ?>
-                  Due: <?php echo htmlspecialchars($closestProject['due_date']); ?>
-                <?php endif; ?>
-              </div>
+                  <?php if (!empty($closestProject['due_date'])): ?>
+                    Due: <span class="red-date"><?php echo date('M d, Y', strtotime($closestProject['due_date'])); ?></span>
+                  <?php endif; ?>
+                </div>
               </div>
             </div>
     

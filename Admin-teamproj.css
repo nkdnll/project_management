@@ -226,7 +226,6 @@ body {
 /* Right Container */
 .container3 {
   padding: 20px;
-  height: 580px;
   width: 450px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -248,13 +247,9 @@ body {
 /* Comment Box */
 .comment-box {
   width: 430px;
-  height: auto;
-  min-height: 400px;
-  max-height: 400x;
   padding: 12px;
   border-radius: 12px;
   background-color: #f0e8d5;
-
   margin-top: 380px;
 }
 

@@ -195,8 +195,11 @@ $stmt->close();
         <div class="file">
           <h3>Project Attachments</h3>
           <?php foreach ($attachments as $att): ?>
-            <p><a href="<?= htmlspecialchars($att['file_path']) ?>" target="_blank">📄 <?= htmlspecialchars($att['file_name']) ?></a></p>
+            <?php if (!empty($att['file_name'])): ?>
+              <p><a href="<?= htmlspecialchars($att['file_path']) ?>" target="_blank">📄 <?= htmlspecialchars($att['file_name']) ?></a></p>
+            <?php endif; ?>
           <?php endforeach; ?>
+
         </div>
       <?php else: ?>
         <p>No attachments found.</p>

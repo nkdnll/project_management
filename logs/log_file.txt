@@ -6,3 +6,17 @@
 [2025-06-13 16:53:11] [student:rai bleh babiano] [Submitted File] Submitted 'LEC-5_video_.pdf' for assignment ID 32
 [2025-06-13 16:53:59] [admin:Anika@gmail.com] [GRADE_ASSIGNMENT] Graded assignment ID 32 for student ID 7 with score 100.
 [2025-06-13 16:56:45] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'
+[2025-06-15 12:02:42] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-15 12:02:56] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-15 12:12:42] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'
+[2025-06-15 12:12:48] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'
+[2025-06-15 12:37:26] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-15 12:37:54] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'
+[2025-06-15 12:50:11] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-15 12:50:28] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-15 12:51:01] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-15 13:02:57] [student:kizzy pink cortez] [Submitted File] Submitted 'DCIT25-Sorting-Algorithms.pdf' for assignment ID 32
+[2025-06-15 13:03:26] [user:raffy@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-15 13:03:51] [student:raffy jay ajero] [Submitted File] Submitted 'LESSON-9-DATABASE-BACK-UP-AND-RECOVERY.pdf' for assignment ID 32
+[2025-06-15 13:04:20] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-15 13:25:56] [admin:Anika@gmail.com] [GRADE_ASSIGNMENT] Graded assignment ID 32 for student ID 8 with score 100.

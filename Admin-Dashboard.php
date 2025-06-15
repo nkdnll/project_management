@@ -36,15 +36,18 @@ $submissionQuery = "
         p.project_name, 
         u.FIRSTNAME, u.LASTNAME, 
         s.file_name, s.uploaded_at,
-        s.assigned_id
+        s.assigned_id,
+        astu.grade
     FROM student_submissions s
     JOIN assignment_students astu ON astu.assigned_id = s.assigned_id AND astu.userinfo_id = s.userinfo_id
     JOIN assigned a ON a.ass_id = s.assigned_id
     JOIN projects p ON p.proj_id = a.proj_id
     JOIN userinfo u ON u.userinfo_ID = s.userinfo_id
     WHERE p.admininfoID = '$adminID'
+      AND astu.grade IS NULL
     ORDER BY s.uploaded_at DESC
 ";
+
 $submissionResult = mysqli_query($conn, $submissionQuery);
 while ($row = mysqli_fetch_assoc($submissionResult)) {
     $submissions[] = $row;

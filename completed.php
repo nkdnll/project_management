@@ -97,7 +97,6 @@ $result = $stmt->get_result();
             </a>
             <div class="status-box">
                 <select name="status" onchange="this.form.submit()" class="status-dropdown">
-                    <option value="Pending" <?= $row['status'] == 'Pending' ? 'selected' : '' ?>>Pending</option>
                     <option value="In Progress" <?= $row['status'] == 'In Progress' ? 'selected' : '' ?>>In Progress</option>
                     <option value="Completed" <?= $row['status'] == 'Completed' ? 'selected' : '' ?>>Completed</option>
                 </select>
