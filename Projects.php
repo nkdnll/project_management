@@ -10,26 +10,27 @@ if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
-$adminID = $_SESSION['admininfoID'];
+$userinfoID = $_SESSION['userinfo_ID']; // logged-in student
 
 $sql = "
     SELECT 
         a.ass_id,
-        a.project_name AS assigned_proj_name, 
-        p.project_name AS proj_name, 
+        a.project_name AS assigned_proj_name,
+        p.project_name AS proj_name,
         ai.INSTRUCTOR,
-        MIN(s.status) AS status
+        s.status,
+        s.userinfo_ID,
+        s.username
     FROM assigned a
     JOIN projects p ON a.proj_id = p.proj_id
     JOIN admininfo ai ON p.admininfoID = ai.admininfoID
-    LEFT JOIN assignment_students s ON s.assigned_id = a.ass_id
-    WHERE ai.admininfoID = ?
-    GROUP BY a.ass_id, a.project_name, p.project_name, ai.INSTRUCTOR
-    HAVING status IS NULL OR status != 'Completed'
+    JOIN assignment_students s ON s.assigned_id = a.ass_id
+    WHERE s.userinfo_ID = ? AND s.status != 'Completed'
 ";
 
+
 $stmt = $connection->prepare($sql);
-$stmt->bind_param("i", $adminID);
+$stmt->bind_param("i", $userinfoID);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
@@ -95,6 +96,7 @@ $result = $stmt->get_result();
     <div class="status-box">
       <form method="POST" action="update-status.php">
         <input type="hidden" name="ass_id" value="<?= (int)$row['ass_id'] ?>">
+        <input type="hidden" name="userinfo_id" value="<?= (int)$row['userinfo_ID'] ?>">
         <select name="status" onchange="this.form.submit()" class="status-dropdown">
           <option value=""><?= htmlspecialchars($row['status'] ?? 'Not Set') ?></option>
           <option value="In Progress" <?= ($row['status'] == 'In Progress') ? 'selected' : '' ?>>In Progress</option>

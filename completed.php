@@ -6,33 +6,37 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $connection = new mysqli("localhost", "root", "", "projectmanagement");
-
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
-$adminID = $_SESSION['admininfoID'];
+if (!isset($_SESSION['userinfo_ID'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$studentID = $_SESSION['userinfo_ID'];
 
 $sql = "
     SELECT 
         a.ass_id,
-        a.project_name AS assigned_proj_name, 
-        p.project_name AS proj_name, 
+        a.project_name AS assigned_proj_name,
+        p.project_name AS proj_name,
         ai.INSTRUCTOR,
-        s.username,
         s.status
-    FROM assigned a
+    FROM assignment_students s
+    JOIN assigned a ON s.assigned_id = a.ass_id
     JOIN projects p ON a.proj_id = p.proj_id
     JOIN admininfo ai ON p.admininfoID = ai.admininfoID
-    JOIN assignment_students s ON s.assigned_id = a.ass_id
-    WHERE ai.admininfoID = ? AND s.status = 'Completed'
+    WHERE s.userinfo_ID = ? AND s.status = 'Completed'
 ";
 
 $stmt = $connection->prepare($sql);
-$stmt->bind_param("i", $adminID);
+$stmt->bind_param("i", $studentID);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -80,36 +84,35 @@ $result = $stmt->get_result();
     </div>
 
     <div class="assigned-proj">
-        <?php
-        if ($result && $result->num_rows > 0):
-            while ($row = $result->fetch_assoc()):
-        ?>
-        <div class="content">
-    <form method="POST" action="update_status.php">
-        <input type="hidden" name="ass_id" value="<?= (int)$row['ass_id'] ?>">
+<?php
+if ($result && $result->num_rows > 0):
+    while ($row = $result->fetch_assoc()):
+?>
+    <div class="content">
         <div class="card-content">
             <a href="content.php?ass_id=<?= (int)$row['ass_id'] ?>">
                 <div class="project-details">
                     <h3 class="project-title"><?= htmlspecialchars($row['assigned_proj_name']) ?></h3>
                     <p class="code"><strong><?= htmlspecialchars($row['proj_name']) ?></strong></p>
-                    <p class="instructor"><?= htmlspecialchars($row['INSTRUCTOR']) ?></p>
+                    <p class="instructor">Instructor: <?= htmlspecialchars($row['INSTRUCTOR']) ?></p>
                 </div>
             </a>
             <div class="status-box">
-                <select name="status" onchange="this.form.submit()" class="status-dropdown">
-                    <option value="In Progress" <?= $row['status'] == 'In Progress' ? 'selected' : '' ?>>In Progress</option>
-                    <option value="Completed" <?= $row['status'] == 'Completed' ? 'selected' : '' ?>>Completed</option>
+                <select class="status-dropdown" disabled>
+                    <option selected>Completed</option>
                 </select>
             </div>
         </div>
-    </form>
-</div>        <?php
-            endwhile;
-        else:
-            echo "<p>No completed projects found.</p>";
-        endif;
-        $connection->close();
-        ?>
+    </div>
+<?php
+    endwhile;
+else:
+    echo "<p>No completed tasks found.</p>";
+endif;
+$connection->close();
+?>
+</div>
+       
     </div>
 </div>
     </div>

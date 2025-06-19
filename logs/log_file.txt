@@ -20,3 +20,102 @@
 [2025-06-15 13:03:51] [student:raffy jay ajero] [Submitted File] Submitted 'LESSON-9-DATABASE-BACK-UP-AND-RECOVERY.pdf' for assignment ID 32
 [2025-06-15 13:04:20] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
 [2025-06-15 13:25:56] [admin:Anika@gmail.com] [GRADE_ASSIGNMENT] Graded assignment ID 32 for student ID 8 with score 100.
+[2025-06-16 16:50:48] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-16 16:53:13] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:14] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:15] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:17] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:18] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:19] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:19] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:19] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:19] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:19] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:53:24] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:25] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:26] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:26] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:27] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:27] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:27] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 16:53:28] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 16:55:51] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-16 16:58:49] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'
+[2025-06-16 16:59:52] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-16 17:00:14] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 17:00:14] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 17:00:15] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 17:00:15] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 17:00:15] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 17:45:19] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 11: 
+[2025-06-16 18:38:29] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 18:38:30] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 18:38:31] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-16 18:38:32] [admin:Anika@gmail.com] [UPDATE_ASSIGNED_USERS] Updated assigned users for project ID 12: 
+[2025-06-17 07:44:04] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-17 07:44:44] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 07:46:31] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-17 08:04:53] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-17 08:06:14] [admin:Anika@gmail.com] [CREATE_PROJECT] Created project 'sad' for team 'as'
+[2025-06-17 08:07:49] [admin:Anika@gmail.com] [ASSIGN_TASK] Assigned task 's' (Project ID: 15) to students: sad asd ads.
+[2025-06-17 08:08:17] [admin:Anika@gmail.com] [DELETE_PROJECT] Deleted project 'TESTING' (ID: 11)
+[2025-06-17 08:08:21] [admin:Anika@gmail.com] [DELETE_PROJECT] Deleted project 'sad' (ID: 15)
+[2025-06-17 08:08:46] [student:rai bleh babiano] [Status Change] Changed status for assignment ID 32 from 'In Progress' to 'Completed'
+[2025-06-17 08:11:45] [admin:Anika@gmail.com] [CREATE_PROJECT] Created project 'luh' for team 'luh1'
+[2025-06-17 08:12:17] [admin:Anika@gmail.com] [ASSIGN_TASK] Assigned task 'yow' (Project ID: 16) to students: sad asd ads.
+[2025-06-17 08:12:58] [student:sad asd ads] [Submitted File] Submitted 'reviewer in multimedia.docx' for assignment ID 34
+[2025-06-17 08:23:30] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 34 (user: sad asd ads) from 'Not Started' to 'In Progress'
+[2025-06-17 08:23:33] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 34 (user: sad asd ads) from 'In Progress' to 'Completed'
+[2025-06-17 09:42:05] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-17 09:44:30] [admin:Anika@gmail.com] [CREATE_PROJECT] Created project 'project test' for team 'test'
+[2025-06-17 09:45:17] [admin:Anika@gmail.com] [ASSIGN_TASK] Assigned task 'project management' (Project ID: 17) to students: tonne labelle sapanghila, kizzy pink cortez.
+[2025-06-17 09:45:43] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 35 (user: tonne labelle sapanghila) from 'Not Started' to 'In Progress'
+[2025-06-17 09:45:43] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 35 (user: kizzy pink cortez) from 'Not Started' to 'In Progress'
+[2025-06-17 09:45:46] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 35 (user: tonne labelle sapanghila) from 'In Progress' to 'Completed'
+[2025-06-17 09:45:46] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 35 (user: kizzy pink cortez) from 'In Progress' to 'Completed'
+[2025-06-17 09:47:34] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:49:36] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:51:53] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:52:38] [student:Tonne Labelle Sapanghila] [Submitted File] Submitted 'Subqueries-1 (1).pdf' for assignment ID 35
+[2025-06-17 09:53:48] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:54:37] [student:kizzy pink cortez] [Submitted File] Submitted 'GRP3_ITEC 60 - PROJECT PRESENTATION.docx' for assignment ID 35
+[2025-06-17 09:58:12] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:58:23] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:58:38] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:59:00] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:59:35] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:59:41] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 09:59:55] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 10:00:16] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 10:00:39] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 10:01:22] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 10:01:46] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-17 10:14:30] [admin:dfsg@gmail.com] [Admin Status Change] Changed status for assignment ID 35 (user: tonne labelle sapanghila) from 'In Progress' to 'Completed'
+[2025-06-17 10:14:30] [admin:dfsg@gmail.com] [Admin Status Change] Changed status for assignment ID 35 (user: kizzy pink cortez) from 'In Progress' to 'Completed'
+[2025-06-17 10:15:08] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 10:15:21] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-17 10:15:37] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 19:02:29] [user:Belle@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 19:02:46] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 19:03:05] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-19 19:03:19] [admin:Anika@gmail.com] [DELETE_PROJECT] Deleted project 'project test' (ID: 17)
+[2025-06-19 19:03:22] [admin:Anika@gmail.com] [DELETE_PROJECT] Deleted project 'luh' (ID: 16)
+[2025-06-19 19:03:23] [admin:Anika@gmail.com] [DELETE_PROJECT] Deleted project 'TESTING LANG' (ID: 12)
+[2025-06-19 19:07:37] [admin:Anika@gmail.com] [CREATE_PROJECT] Created project 'test' for team 'testong'
+[2025-06-19 19:08:11] [admin:Anika@gmail.com] [ASSIGN_TASK] Assigned task 'test' (Project ID: 18) to students: kizzy pink cortez, rai bleh babiano.
+[2025-06-19 19:08:45] [student:kizzy pink cortez] [Submitted File] Submitted 'reviewer in multimedia.docx' for assignment ID 36
+[2025-06-19 19:09:19] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 19:32:14] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 19:33:08] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 19:33:48] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-19 19:34:13] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 36 (user: kizzy pink cortez) from 'Not Started' to 'Completed'
+[2025-06-19 19:34:13] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 36 (user: rai bleh babiano) from 'Not Started' to 'Completed'
+[2025-06-19 19:35:11] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 36 (user: kizzy pink cortez) from 'In Progress' to 'Completed'
+[2025-06-19 19:35:11] [admin:Anika@gmail.com] [Admin Status Change] Changed status for assignment ID 36 (user: rai bleh babiano) from 'In Progress' to 'Completed'
+[2025-06-19 19:52:54] [admin:Anika@gmail.com] [ASSIGN_TASK] Assigned task 'test 2' (Project ID: 18) to students: kizzy pink cortez, rai bleh babiano.
+[2025-06-19 20:07:53] [admin:Anika@gmail.com] [ASSIGN_TASK] Assigned task 'test 3' (Project ID: 18) to students: kizzy pink cortez, rai bleh babiano.
+[2025-06-19 20:08:06] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 20:09:44] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-19 20:09:49] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 20:10:01] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-19 20:10:19] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.

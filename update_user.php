@@ -34,21 +34,6 @@ if ($row = $assignedResult->fetch_assoc()) {
         $assignedUsernames = array_map('trim', explode(',', $assigned_students_str));
     }
 }
-// After successful update
-if ($stmt->execute()) {
-    if (isset($_SESSION['Email'])) {
-        require_once 'log1.php'; // ensure the log function is available
-
-        $description = "Updated assigned users for project ID $proj_id: " . htmlspecialchars($_POST['usernames']);
-        logTransaction('admin', $_SESSION['Email'], 'UPDATE_ASSIGNED_USERS', $description);
-    }
-
-    header("Location: Admin-project.php?status=updated");
-    exit();
-} else {
-    echo "Error updating users.";
-}
-
 ?>
 
 <!DOCTYPE html>

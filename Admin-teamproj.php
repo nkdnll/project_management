@@ -1,22 +1,33 @@
 <?php
 session_start();
 include 'log1.php';
+
 $connection = new mysqli("localhost", "root", "", "projectmanagement");
 if ($connection->connect_error) die("Connection failed: " . $connection->connect_error);
 
 $ass_id = isset($_GET['ass_id']) ? (int)$_GET['ass_id'] : null;
 $students = [];
 
-// Insert Comment
+// ✅ Insert Comment (Supports both Admin and Student)
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment_text'], $_POST['ass_id'], $_POST['recipient_id'])) {
     $txt = trim($_POST['comment_text']);
     $aid = (int)$_POST['ass_id'];
     $rid = (int)$_POST['recipient_id'];
-    $author = $_SESSION['userinfo_ID'];
-    $type = 'student';
+
+    // ✅ Check whether it's an admin or student
+    if (isset($_SESSION['admininfoID'])) {
+        $author = $_SESSION['admininfoID'];
+        $type = 'admin';
+    } else {
+        $author = $_SESSION['userinfo_ID'];
+        $type = 'student';
+    }
 
     if ($txt !== '' && $aid) {
-        $stmt = $connection->prepare("INSERT INTO comments (ass_id, recipient_id, userinfo_id, user_type, comment_text, created_at) VALUES (?, ?, ?, ?, ?, NOW())");
+        $stmt = $connection->prepare("
+            INSERT INTO comments (ass_id, recipient_id, userinfo_id, user_type, comment_text, created_at)
+            VALUES (?, ?, ?, ?, ?, NOW())
+        ");
         $stmt->bind_param("iiiss", $aid, $rid, $author, $type, $txt);
         $stmt->execute();
         $stmt->close();
@@ -25,9 +36,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment_text'], $_POS
     }
 }
 
+// ✅ Load Students Assigned to This Project
 if ($ass_id) {
-    // Load students
-    $stmt = $connection->prepare("SELECT s.userinfo_ID, CONCAT(u.FIRSTNAME, ' ', u.MIDDLENAME, ' ', u.LASTNAME) fullname, s.status, s.grade FROM assignment_students s JOIN userinfo u ON s.userinfo_ID=u.userinfo_ID WHERE s.assigned_id=?");
+    $stmt = $connection->prepare("
+        SELECT s.userinfo_ID,
+               CONCAT(u.FIRSTNAME, ' ', u.MIDDLENAME, ' ', u.LASTNAME) AS fullname,
+               s.status,
+               s.grade
+        FROM assignment_students s
+        JOIN userinfo u ON s.userinfo_ID = u.userinfo_ID
+        WHERE s.assigned_id = ?
+    ");
     $stmt->bind_param("i", $ass_id);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -41,20 +60,27 @@ if ($ass_id) {
     }
     $stmt->close();
 
-    // Load submissions
-    $stmt = $connection->prepare("SELECT userinfo_id, file_name, file_path, uploaded_at FROM student_submissions WHERE assigned_id=?");
+    // ✅ Load Student Submissions
+    $stmt = $connection->prepare("
+        SELECT userinfo_id, file_name, file_path, uploaded_at
+        FROM student_submissions
+        WHERE assigned_id = ?
+    ");
     $stmt->bind_param("i", $ass_id);
     $stmt->execute();
     $result = $stmt->get_result();
     while ($file = $result->fetch_assoc()) {
         $uid = $file['userinfo_id'];
         $file['file_size'] = file_exists($file['file_path']) ? filesize($file['file_path']) : 0;
-        if (isset($students[$uid])) $students[$uid]['submissions'][] = $file;
+        if (isset($students[$uid])) {
+            $students[$uid]['submissions'][] = $file;
+        }
     }
     $stmt->close();
 }
-$project_name = 'Project'; // default fallback
 
+// ✅ Get Project Name
+$project_name = 'Project'; // default
 if ($ass_id) {
     $stmt = $connection->prepare("SELECT project_name FROM assigned WHERE ass_id = ?");
     $stmt->bind_param("i", $ass_id);
@@ -63,10 +89,12 @@ if ($ass_id) {
     $stmt->fetch();
     $stmt->close();
 }
-$totalCount = 0;
 
+// ✅ Count Students Assigned & Completed
+$totalCount = 0;
+$completedCount = 0;
 if ($ass_id) {
-    // Count total students
+    // Total students
     $stmt = $connection->prepare("SELECT COUNT(*) FROM assignment_students WHERE assigned_id = ?");
     $stmt->bind_param("i", $ass_id);
     $stmt->execute();
@@ -74,7 +102,7 @@ if ($ass_id) {
     $stmt->fetch();
     $stmt->close();
 
-    // Count students with status = 'Completed'
+    // Completed students
     $stmt = $connection->prepare("SELECT COUNT(*) FROM assignment_students WHERE assigned_id = ? AND status = 'Completed'");
     $stmt->bind_param("i", $ass_id);
     $stmt->execute();
@@ -83,6 +111,7 @@ if ($ass_id) {
     $stmt->close();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
