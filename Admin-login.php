@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "projectmanagement");
+$conn = mysqli_connect("localhost", "root", "", "project_management");
 include 'log1.php';
 
 // Check DB connection

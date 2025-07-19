@@ -155,7 +155,7 @@ if ($ass_id) {
         </div>
         <div class="wrapper">
             <div class="container1">
-                <h1>TEAM PROJECTS</h1><hr>
+                <h1>Class Work</h1><hr>
                 <div class="title"><h2 class="NAME">NAME</h2><h2 class="STATUS">STATUS</h2></div><hr>
                 <?php foreach ($students as $uid => $s): ?>
                     <div class="content student-item" data-uid="<?= $uid ?>">
