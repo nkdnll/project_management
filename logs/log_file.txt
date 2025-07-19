@@ -119,6 +119,31 @@
 [2025-06-19 20:09:49] [user:rai@gmail.com] [LOGIN] User successfully logged in.
 [2025-06-19 20:10:01] [user:rai@gmail.com] [LOGIN] User successfully logged in.
 [2025-06-19 20:10:19] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-20 06:52:27] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-20 06:52:34] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-20 06:53:36] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-06-20 07:44:08] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-06-20 07:48:26] [admin:zycortez@gmail.com] [CREATE_PROJECT] Created project 'test' for team 'testinh1'
+[2025-06-20 07:49:16] [admin:zycortez@gmail.com] [ASSIGN_TASK] Assigned task 'text' (Project ID: 19) to students: zy lala cortez, kizzy pink cortez.
+[2025-06-20 07:51:10] [admin:zycortez@gmail.com] [ASSIGN_TASK] Assigned task 'aersdtf' (Project ID: 19) to students: kizzy pink cortez.
+[2025-06-20 07:51:50] [student:Zy lala Cortez] [Submitted File] Submitted '6854f65c806b7-68457c8f761f5-AUDIO-ACT-SCRIPT.docx' for assignment ID 39
+[2025-06-20 08:02:53] [admin:zycortez@gmail.com] [ASSIGN_TASK] Assigned task 'hello' (Project ID: 19) to students: zy lala cortez, kizzy pink cortez.
+[2025-07-17 06:29:12] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-17 06:29:29] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-07-17 06:29:41] [user:rai@gmail.com] [LOGIN] User successfully logged in.
+[2025-07-17 06:29:54] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-17 07:11:20] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-17 07:11:41] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-07-17 07:12:07] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-17 07:17:50] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-07-17 07:46:32] [admin:kizzy@gmail.com] [CREATE_PROJECT] Created project 'lala' for team 'lala1'
+[2025-07-17 07:48:22] [admin:kizzy@gmail.com] [ASSIGN_TASK] Assigned task 'architecture' (Project ID: 20) to students: kizzy1 asa1 asa, rai bleh babiano.
+[2025-07-17 07:49:19] [student:kizzy1 asa1 asa] [Submitted File] Submitted 'Lesson-01_Introduction-to-System-Integration-and-Architecture.pdf' for assignment ID 43
+[2025-07-17 07:50:15] [admin:kizzy@gmail.com] [GRADE_ASSIGNMENT] Graded assignment ID 43 for student ID 14 with score 90.
+[2025-07-18 15:11:41] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-18 15:12:01] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-18 15:46:16] [user:kizzypink@gmail.com] [LOGIN] User successfully logged in.
+[2025-07-18 15:46:24] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
 [2025-07-16 11:19:19] [user:AnikaB@gmail.com] [LOGIN] User successfully logged in.
 [2025-07-16 11:24:46] [user:AnikaB@gmail.com] [LOGIN] User successfully logged in.
 [2025-07-16 11:44:30] [user:maika@gmail.com] [LOGIN] User successfully logged in.
@@ -127,3 +152,6 @@
 [2025-07-16 13:11:36] [user:maika@gmail.com] [LOGIN] User successfully logged in.
 [2025-07-19 16:55:00] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
 [2025-07-19 18:23:10] [admin:Anika@gmail.com] [CREATE_PROJECT] Created project 'Try' for team 'BSIT'
+[2025-07-19 16:41:01] [admin:Anika@gmail.com] [LOGIN] Admin successfully logged in.
+[2025-07-19 18:44:52] [admin:Anika@gmail.com] [CREATE_PROJECT] Created project 'hatdog' for team 'cheesedog'
+[2025-07-16 13:11:36] [user:maika@gmail.com] [LOGIN] User successfully logged in.
