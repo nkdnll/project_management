@@ -7,11 +7,16 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+if (isset($_SESSION['registration_success']) && $_SESSION['registration_success'] === true) {
+  echo "<script>alert('Congratulations! You are now registered. Please log in.');</script>";
+  unset($_SESSION['registration_success']);
+}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $Email = trim($_POST['Email']);
     $password = trim($_POST['password']);
 
-    // === Handle Login ===
+    
     if (isset($_POST['login'])) {
         $query = "SELECT u.UserID, u.Email, u.password, ui.userinfo_ID, ui.firstname, ui.middlename, ui.lastname, ui.PROFILE_PIC
           FROM userin u
@@ -42,36 +47,38 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 
+   
     // === Handle Registration ===
-    elseif (isset($_POST['submit'])) {
-        $confirm_password = trim($_POST['Conpassword']); // ✅ fixed typo
+elseif (isset($_POST['submit'])) {
+  $confirm_password = trim($_POST['Conpassword']); // ✅ fixed typo
 
-        if ($password !== $confirm_password) {
-            echo "<script>alert('Passwords do not match!'); window.history.back();</script>";
-        } else {
-            $check_query = "SELECT * FROM userin WHERE Email = ?";
-            $stmt = mysqli_prepare($conn, $check_query);
-            mysqli_stmt_bind_param($stmt, "s", $Email);
-            mysqli_stmt_execute($stmt);
-            $check_result = mysqli_stmt_get_result($stmt);
+  if ($password !== $confirm_password) {
+      echo "<script>alert('Passwords do not match!'); window.history.back();</script>";
+  } else {
+      $check_query = "SELECT * FROM userin WHERE Email = ?";
+      $stmt = mysqli_prepare($conn, $check_query);
+      mysqli_stmt_bind_param($stmt, "s", $Email);
+      mysqli_stmt_execute($stmt);
+      $check_result = mysqli_stmt_get_result($stmt);
 
-            if (mysqli_num_rows($check_result) > 0) {
-                echo "<script>alert('Email already registered. Please use a different one.'); window.history.back();</script>";
-            } else {
-                $sql = "INSERT INTO userin (Email, password) VALUES (?, ?)";
-                $stmt = mysqli_prepare($conn, $sql);
-                mysqli_stmt_bind_param($stmt, "ss", $Email, $password); // ❗ no hashing here — use in real apps!
+      if (mysqli_num_rows($check_result) > 0) {
+          echo "<script>alert('Email already registered. Please use a different one.'); window.history.back();</script>";
+      } else {
+          $sql = "INSERT INTO userin (Email, password) VALUES (?, ?)";
+          $stmt = mysqli_prepare($conn, $sql);
+          mysqli_stmt_bind_param($stmt, "ss", $Email, $password); // ❗ no hashing here — use in real apps!
 
-                if (mysqli_stmt_execute($stmt)) {
-                    $_SESSION['Email'] = $Email;
-                    header("Location: userinfo.php"); // to collect more info
-                    exit();
-                } else {
-                    echo "Error: " . mysqli_error($conn);
-                }
-            }
-        }
-    }
+          if (mysqli_stmt_execute($stmt)) {
+              $_SESSION['Email'] = $Email;
+              $_SESSION['registration_success'] = true; // ✅ Set flag
+              header("Location: login.php"); // Redirect to login page
+              exit();
+          } else {
+              echo "Error: " . mysqli_error($conn);
+          }
+      }
+  }
+}
 }
 ?>
 
